@@ -1,0 +1,18 @@
+version: "3"
+services:
+  slsfei-web:
+    container_name: slsfei-web
+    image: slsfei/slsfei_stack
+    privileged: true
+    build:
+      context: .
+      args:
+          BUILDPLATFORM: linux/arm/v7
+    environment:
+        SECRET_KEY: g)cfj2lvj^71rw-hbjgb&e_1cu3ch=vh)!i*7jb2^cr1y@5ufr
+    volumes:
+        - ./driver_config.ini:/app/driver_build/out/config.ini:ro
+        - /dev:/dev
+        - /run/udev:/run/udev:ro
+    ports: 
+      - '8000:8000'
