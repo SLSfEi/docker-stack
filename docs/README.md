@@ -8,4 +8,4 @@ This docker container facilitate the deployment process of SLSfEi System by auto
 # Configurations
 The configuration file `driver_config.ini` is based on `config.ini` from [SLSfEi/scan-provider-cpp](https://github.com/SLSfEi/scan-provider-cpp)
 
-**Note:** Current configuration is set to build for Raspberry Pi 4. If you want to build for other platform, please change build argument `BUILDPLATFORM` accordingly.
+**Note:** Current configuration is set to build for Raspberry Pi 4. If you want to build for other platform, please change build argument `BUILDPLATFORM` in `docker-compose.yml` accordingly.
